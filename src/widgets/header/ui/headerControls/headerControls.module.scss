@@ -1,0 +1,5 @@
+@import '@/app/styles';
+
+.container {
+  @include flex(20px);
+}

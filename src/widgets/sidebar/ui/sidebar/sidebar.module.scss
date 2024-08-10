@@ -1,0 +1,7 @@
+@import '@/app/styles';
+
+.container {
+  width: $sidebar-width;
+  border-right: 1px solid $grayscale-4;
+  height: 100%;
+}

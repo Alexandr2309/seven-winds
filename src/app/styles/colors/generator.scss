@@ -1,0 +1,29 @@
+@import './config';
+
+@function generate-colors($colors) {
+  $colors-map: ();
+
+  @each $color-group-name, $color-group in $colors {
+    @each $color-name, $color-value in $color-group {
+      $colors-map: map-merge(
+        $colors-map,
+        (
+          '#{$color-group-name}#{$color-name}': #{$color-value},
+        )
+      );
+    }
+  }
+
+  @return $colors-map;
+}
+
+@mixin create-css-root-colors() {
+  --constant-wihte: #fff;
+  --constant-black: #000;
+
+  $colors-map: generate-colors($colors);
+
+  @each $color-name, $color-value in $colors-map {
+    --#{$color-name}: #{$color-value};
+  }
+}

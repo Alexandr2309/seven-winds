@@ -1,0 +1,26 @@
+@import '@/app/styles';
+
+.container {
+  @include flex-row-center;
+  @include color-svg($grayscale-6);
+
+  height: $header-height;
+  min-width: $sidebar-width;
+  max-width: $sidebar-width;
+  border-bottom: 1px solid $grayscale-4;
+  padding: 0 $default-page-padding-x;
+  padding-right: 7px;
+
+  .content {
+    @include flex-row-center;
+
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .text {
+    @include flex-col;
+
+    color: $grayscale-3;
+  }
+}

@@ -1,0 +1,17 @@
+@import './placeholders';
+
+.title {
+  @extend %title;
+}
+
+.text {
+  @extend %text;
+}
+
+.caption {
+  @extend %caption;
+}
+
+.caption-mini {
+  @extend %caption-mini;
+}

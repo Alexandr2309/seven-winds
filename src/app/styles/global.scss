@@ -1,0 +1,36 @@
+// this file should ONLY be imported once! (to root layout)
+@import 'reset';
+@import 'colors/generator';
+@import 'colors/map';
+@import 'font/fontMap';
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Roboto&display=swap');
+
+* {
+  font-family: Roboto, sans-serif;
+}
+
+html {
+  overscroll-behavior: none;
+}
+
+.app {
+  @include create-css-root-colors;
+  @extend %text;
+
+  background-color: $grayscale-2;
+  color: $grayscale-5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.layout {
+  flex-grow: 1;
+  display: grid;
+  grid-template: 1fr / 234px 1fr;
+  overflow: hidden;
+  padding-top: $header-height;
+}

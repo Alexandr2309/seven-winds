@@ -1,0 +1,43 @@
+@import '@/app/styles';
+
+.container {
+  @include flex-row-center(31px);
+
+  color: $grayscale-3;
+  padding: 0 $default-page-padding-x;
+  height: $header-height;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  border-bottom: 1px solid $grayscale-4;
+}
+
+.links {
+  @include flex-row-center(28px);
+
+  height: 100%;
+
+  button {
+    height: 100%;
+    position: relative;
+
+    &.active-link {
+      color: $grayscale-6;
+    }
+
+    &.active-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+      transform-origin: center;
+      right: 0;
+      width: 110%;
+      height: 2px;
+      background-color: $grayscale-6;
+    }
+  }
+}

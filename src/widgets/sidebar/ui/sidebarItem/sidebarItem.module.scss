@@ -1,0 +1,19 @@
+@import '@/app/styles';
+
+.container {
+  @include flex-row-center;
+
+  --section-height: 32px;
+
+  color: $grayscale-6;
+  height: var(--section-height);
+  padding: 0 $default-page-padding-x;
+
+  &.active {
+    background-color: $grayscale-3;
+  }
+
+  .content {
+    @include flex-row-center(14px);
+  }
+}

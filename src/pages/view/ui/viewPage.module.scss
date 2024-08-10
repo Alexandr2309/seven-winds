@@ -1,0 +1,20 @@
+@import '@/app/styles';
+
+.container {
+  .head {
+    @include flex-row-center;
+
+    width: 100%;
+    border-bottom: 1px solid $grayscale-4;
+    height: $header-height;
+  }
+
+  .title {
+    @include flex-row-center;
+
+    color: $grayscale-6;
+    padding: 0 15px;
+    height: 100%;
+    border-right: 1px solid $grayscale-4;
+  }
+}
